@@ -22,7 +22,7 @@ public class Cursos {
     private String modalidad;
 
     @ManyToOne
-    @JoinColumn(name = "responsable_id", nullable = false) // ¡Ahora es obligatorio!
+    @JoinColumn(name = "responsable_id", nullable = false)
     private Personas responsable;
 
     // Constructores

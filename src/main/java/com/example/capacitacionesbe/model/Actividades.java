@@ -24,7 +24,7 @@ public class Actividades {
     private String tipo;
 
     @ManyToOne
-    @JoinColumn(name = "responsable_id", nullable = false) // ¡Ahora es obligatorio!
+    @JoinColumn(name = "responsable_id", nullable = false)
     private Personas responsable;
 
     // Constructores
