@@ -64,8 +64,7 @@ public class CursoService {
                 }
                 curso.setResponsable(newResponsable.get());
             } else {
-                // Si se quiere desvincular o no se provee un responsable en el update,
-                // puedes decidir qué hacer. Como lo hicimos obligatorio, aquí no permitiríamos null.
+                // Como lo hicimos obligatorio, aquí no permitiríamos null.
                 throw new IllegalArgumentException("El curso debe tener un responsable asignado para la actualización.");
             }
 

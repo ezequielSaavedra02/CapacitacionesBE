@@ -17,8 +17,7 @@ public class ParticipacionesController {
 
     private final ParticipacionService participacionService; // <--- Ahora inyectamos el servicio
 
-    // Los repositorios ya no se inyectan directamente en el controlador
-    // Son gestionados por el servicio
+    // el servicio se encarga de las interacciones con la base de datos.
 
     @Autowired
     public ParticipacionesController(ParticipacionService participacionService) { // <--- Constructor con el servicio

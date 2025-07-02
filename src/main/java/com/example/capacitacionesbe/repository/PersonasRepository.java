@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface PersonasRepository extends JpaRepository<Personas, Long> {
-    Optional<Personas> findById(Long id);
 
     void deleteById(Long id);
 

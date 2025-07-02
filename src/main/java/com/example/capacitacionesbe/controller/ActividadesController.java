@@ -17,7 +17,6 @@ public class ActividadesController {
 
     private final ActividadService actividadService; // <--- Ahora inyectamos el servicio
 
-    // Ya no inyectamos directamente los repositorios aquí;
     // el servicio se encarga de las interacciones con la base de datos.
 
     @Autowired

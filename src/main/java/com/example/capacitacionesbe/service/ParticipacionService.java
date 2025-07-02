@@ -82,8 +82,6 @@ public class ParticipacionService {
             participacion.setCurso(null); // Aseguramos que el curso sea null si es una actividad
         }
 
-        // 4. Lógica de negocio adicional (ej. validar estado o rol)
-        // ...
 
         return participacionRepository.save(participacion);
     }
@@ -129,8 +127,6 @@ public class ParticipacionService {
             participacion.setActividad(newActividad.get());
             participacion.setCurso(null); // Limpiar curso si se asocia a una actividad
         } else {
-            // Si en el update no se provee ni curso ni actividad, ¿qué debería pasar?
-            // Podrías mantener los existentes o forzar que se desvinculen, dependiendo de tu lógica de negocio.
             // Por simplicidad, aquí mantenemos los existentes si no se especifican nuevos.
         }
 

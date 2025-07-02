@@ -17,6 +17,8 @@ public class PersonasController {
 
     private final PersonaService personasService; // <--- Ahora inyectamos el servicio
 
+    // el servicio se encarga de las interacciones con la base de datos.
+
     @Autowired // Spring inyectará automáticamente una instancia de PersonasService
     public PersonasController(PersonaService personasService) { // <--- Constructor para el servicio
         this.personasService = personasService;

@@ -27,10 +27,6 @@ public class PersonaService {
     }
 
     public Personas savePersona(Personas persona) {
-        // Aquí podrías añadir lógica de negocio, por ejemplo:
-        // - Validar el DNI o email antes de guardar para evitar duplicados (adicionalmente a unique=true en la entidad)
-        // - Aplicar reglas de formato
-        // - Enviar una notificación, etc.
         return personaRepository.save(persona);
     }
 
@@ -46,7 +42,6 @@ public class PersonaService {
             persona.setTelefono(personaDetails.getTelefono());
             return personaRepository.save(persona);
         } else {
-            // Podrías lanzar una excepción personalizada aquí, o devolver null/Optional.empty
             throw new RuntimeException("Persona no encontrada con ID: " + id);
         }
     }
@@ -59,10 +54,4 @@ public class PersonaService {
         }
     }
 
-    // Ejemplo de método de negocio más complejo:
-    public Optional<Personas> findByDni(String dni) {
-        // Asumiendo que agregaste este método en PersonaRepository
-        // return personaRepository.findByDni(dni);
-        return Optional.empty(); // Placeholder si no tienes findByDni en tu repo
-    }
 }

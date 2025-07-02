@@ -17,8 +17,7 @@ public class CursosController {
 
     private final CursoService cursoService; // <--- Ahora inyectamos el servicio
 
-    // Ya no inyectamos directamente los repositorios en el controlador,
-    // el servicio se encarga de eso.
+    // El servicio inyecta los repositorios al controlador
 
     @Autowired
     public CursosController(CursoService cursoService) { // <--- Constructor con el servicio
@@ -44,7 +43,7 @@ public class CursosController {
             return ResponseEntity.status(HttpStatus.CREATED).body(savedCurso);
         } catch (IllegalArgumentException e) {
             // Capturamos la excepción lanzada por el servicio si el responsable no existe o no se proporciona
-            return ResponseEntity.badRequest().body(null); // Puedes añadir un mensaje de error más detallado si lo deseas
+            return ResponseEntity.badRequest().body(null);
         }
     }
 
