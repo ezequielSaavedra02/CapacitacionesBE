@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/cursos")
-@CrossOrigin(origins = "http://localhost:3000") // Permite solicitudes desde tu aplicación React (ajusta el puerto si es diferente)
+@CrossOrigin(origins = "http://localhost:5173") // Permite solicitudes desde tu aplicación React (ajusta el puerto si es diferente)
 public class CursosController {
 
     private final CursoService cursoService; // <--- Ahora inyectamos el servicio

@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/personas") // Ruta base para todas las operaciones de Persona
-@CrossOrigin(origins = "http://localhost:3000") // Permite solicitudes desde tu aplicación React (ajusta el puerto si es diferente)
+@CrossOrigin(origins = "http://localhost:5173") // Permite solicitudes desde tu aplicación React (ajusta el puerto si es diferente)
 public class PersonasController {
 
     private final PersonaService personasService; // <--- Ahora inyectamos el servicio
